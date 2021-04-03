@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Kombat11';
+    src: url(../fonts/Kombat11-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
