@@ -279,6 +279,9 @@ let checkWin = () => {
         items[2].value == 'x' && items[5].value == 'x' && items[8].value == 'x' ||
         items[0].value == 'x' && items[4].value == 'x' && items[8].value == 'x' ||
         items[6].value == 'x' && items[4].value == 'x' && items[2].value == 'x') {
+        items.forEach(item => {
+            item.interactive = false;
+        })
         setTimeout(() => {
             if (playerOne === 'x') {
                 showPlayerOneWin();
@@ -299,6 +302,9 @@ let checkWin = () => {
         items[2].value == 'o' && items[5].value == 'o' && items[8].value == 'o' ||
         items[0].value == 'o' && items[4].value == 'o' && items[8].value == 'o' ||
         items[6].value == 'o' && items[4].value == 'o' && items[2].value == 'o') {
+        items.forEach(item => {
+            item.interactive = false;
+        })
         setTimeout(() => {
             if (playerOne === 'x') {
                 showPlayerTwoWin();
