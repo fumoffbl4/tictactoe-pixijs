@@ -26,10 +26,30 @@ const app = new Application({
 
 document.body.appendChild(app.view);
 
+//LOADING SCREEN 
+
+let loadingScreen = new Container();
+app.stage.addChild(loadingScreen);
+
+let loadingBg = new PIXI.Sprite(Texture.WHITE);
+loadingScreen.addChild(loadingBg);
+loadingBg.width = 800;
+loadingBg.height = 600;
+loadingBg.tint = 0x2E2E2E;
+
+
+setTimeout(() => {
+    loadingScreen.visible = false;
+    chooseScene.visible = true;
+}, 2000);
+
+
 // START SCENE
 
 let chooseScene = new Container();
 app.stage.addChild(chooseScene);
+
+chooseScene.visible = false;
 
 let style = new TextStyle({
     fontFamily: 'Kombat',
