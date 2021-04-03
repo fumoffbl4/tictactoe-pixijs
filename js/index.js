@@ -27,7 +27,7 @@ let chooseScene = new Container();
 app.stage.addChild(chooseScene);
 
 let style = new TextStyle({
-    fontFamily: 'Kombat11',
+    fontFamily: 'Kombat',
     fontSize: 52,
     fill: 'white',
     stroke: 'grey',
@@ -39,7 +39,7 @@ let style = new TextStyle({
 });
 
 let continueButtonStyle = new TextStyle({
-    fontFamily: 'Kombat11',
+    fontFamily: 'Kombat',
     fontSize: 32,
     fill: 'white',
     stroke: 'grey',

@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'Kombat11';
-    src: url(../fonts/Kombat11-Regular.ttf);
+    font-family: 'Kombat';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kombat'), url('../fonts/Kombat11-Regular.woff2');
 }
 
 * {
@@ -16,6 +18,4 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-family: 'Kombat11', regular;
 }
