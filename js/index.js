@@ -1,3 +1,5 @@
+// ALIASES
+
 let Application = PIXI.Application,
     Container = PIXI.Container,
     Graphics = PIXI.Graphics,
@@ -6,6 +8,7 @@ let Application = PIXI.Application,
     Texture = PIXI.Texture,
     TilingSprite = PIXI.TilingSprite;
 
+// VARIABLES
 
 let playerOne,
     turnX = true,
@@ -14,6 +17,8 @@ let playerOne,
         player1: 0,
         player2: 0
     };
+
+//APPLICATION
 
 const app = new Application({
     backgroundColor: 0x2E2E2E,
