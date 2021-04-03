@@ -263,7 +263,7 @@ let checkWin = () => {
 
             clearGameField();
         }, 500);
-        return;
+        return
     }
 
     if (items[0].value == 'o' && items[1].value == 'o' && items[2].value == 'o' ||
@@ -288,32 +288,35 @@ let checkWin = () => {
 
     changeTurnImage();
     incrementCounter();
-    checkDraw();
+    checkTie();
 }
 
 let changeTurnImage = () => {
-    turnXImage.visible = !turnXImage.visible;
-    turnOImage.visible = !turnOImage.visible;
+    if (moveCounter < 9) {
+        turnXImage.visible = !turnXImage.visible;
+        turnOImage.visible = !turnOImage.visible;
+    };
 }
 
 let incrementCounter = () => {
-    if(moveCounter < 9) {
+    if (moveCounter < 9) {
         ++moveCounter;
+        moveCounterText.text = 'Move:   ' + moveCounter;
+        return;
     };
-    moveCounterText.text = 'Move:   ' + moveCounter;
+    ++moveCounter;
 }
 
-let checkDraw = () => {
-    while (moveCounter <= 9) {
-        return;
+let checkTie = () => {
+
+    if (moveCounter > 9) {
+        setTimeout(() => {
+            resultText.text = 'It`s a tie';
+            resultText.x = 310;
+
+            clearGameField();
+        }, 500);
     }
-
-    setTimeout(() => {
-        resultText.text = 'It`s a draw';
-        resultText.x = 280;
-
-        clearGameField();
-    }, 500);
 };
 
 let clearGameField = () => {
@@ -330,7 +333,7 @@ let resetGame = () => {
     gameEndScene.visible = true;
     turnXImage.visible = true;
     turnOImage.visible = false;
-    
+
 };
 
 let showPlayerOneWin = () => {
