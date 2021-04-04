@@ -94,10 +94,10 @@ chooseX.scale.set(0.7);
 chooseX.position.set(250, 350);
 chooseX.interactive = true;
 chooseX.on('click', () => {
+    addCells();
     playerOne = 'x';
     chooseScene.visible = false;
     gameWrapper.visible = true;
-    addCells();
 });
 
 
@@ -108,9 +108,9 @@ chooseO.scale.set(0.7);
 chooseO.position.set(510, 350);
 chooseO.interactive = true;
 chooseO.on('click', () => {
+    addCells();
     chooseScene.visible = false;
     gameWrapper.visible = true;
-    addCells();
 });
 
 
